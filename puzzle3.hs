@@ -6,9 +6,9 @@ module Main where
     import qualified Data.List as List
 
 
-    solve ::[[Char]] -> [(Int, Int)]
-    solve [] = []
-    solve x = solve' $ List.transpose x
+    solve ::[[Char]] -> Int
+    solve [] = 0
+    solve x = datafind $ solve' $ List.transpose x
 
     solve' :: [[Char]] -> [(Int, Int)]
     solve' [] = []
