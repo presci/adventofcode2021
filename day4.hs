@@ -39,7 +39,8 @@ parsebingos value = map parsebingo value
         cellParse value = ((read::String -> Int) value, False, Nothing)
 
 
--- | findWinner takes the list of List of Bingo boards. And tries to find the winner.
+-- | Solution 1: find the first winner
+-- findWinner takes the list of List of Bingo boards. And tries to find the winner.
 -- if any  row or column's number matches the numbers that are drawn would be the winner.
 findWinner::[[BingoBoard]] -> BingoBoard
 findWinner [] = []
